@@ -1,0 +1,42 @@
+{
+  "position": "top",
+  "modules-left": ["disk", "cpu", "memory"],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": ["network#speed", "clock"],
+  "clock": {
+    "format": "<span foreground='#f5c2e7'>   </span>{:%a %d %H:%M}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "on-click": "thunderbird",
+  },
+  "network#speed": {
+    "interval": 1,
+    "format": "{ifname}",
+    "format-ethernet": "<span size='13000' foreground='#f5e0dc'>{icon}   {bandwidthDownBytes} |   {bandwidthUpBytes}</span> ",
+    "format-disconnected": "󰌙",
+    "tooltip-format": "{ipaddr}",
+    "format-linked": "󰈁 {ifname} (No IP)",
+    "tooltip-format-wifi": "{essid} {icon} {signalStrength}%",
+    "tooltip-format-ethernet": "{ifname} 󰌘",
+    "tooltip-format-disconnected": "󰌙 Disconnected",
+    "max-length": 30,
+    "format-icons": [""],
+  },
+  "cpu": {
+    "format": "<span size='13000' foreground='#f5c2e7'> {icon}  {usage}% {max_frequency} GHz</span>",
+    "format-icons": {
+      "default": [""],
+    },
+  },
+  "memory": {
+    "format": "<span size='13000' foreground='#f5e0dc'> {icon}  {percentage}%</span>",
+    "format-icons": {
+      "default": ["RAM"],
+    },
+  },
+  "disk": {
+    "interval": 30,
+    "format": "<span size='13000' foreground='#a6e3a1'>{specific_free:0.2f} GB free</span>",
+    "path": "/",
+    "unit": "GB",
+  },
+}
