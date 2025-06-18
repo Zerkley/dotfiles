@@ -2,6 +2,7 @@
   "Stateless Widget": {
     "prefix": "statelessW",
     "body": [
+      "import 'package:flutter/material.dart';",
       "class ${1:name} extends StatelessWidget {",
       "  const ${1:name}({super.key});\n",
       "  @override",
@@ -17,10 +18,11 @@
   "Stateful Widget": {
     "prefix": "statefulW",
     "body": [
+      "import 'package:flutter/material.dart';",
       "class ${1:name} extends StatefulWidget {",
       "  ${1:name}({super.key});\n",
       "  @override",
-      "  _${1:WidgetName}State createState() => _${1:WidgetName}State();",
+      "  State<${1:WidgetName}> createState() => _${1:WidgetName}State();",
       "}\n",
       "class _${1:index}State extends State<${1:index}> {",
       "  @override",
